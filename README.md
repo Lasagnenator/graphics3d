@@ -43,4 +43,4 @@ Here point is a list `[x,y,z]` and `theta_x,y` is the angle horizontally (x) or 
 
 # Acknowledgments
 All of my work is free to use and create with however you must credit me and provide a link to this repository when used.
-This whole library is my own work and I came up with the algorithms by my own.
+This whole library is my own work and I came up with the algorithms on my own.
