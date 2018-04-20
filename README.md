@@ -8,14 +8,15 @@ None. This is a standalone library for python 3.x. It uses the builtin math modu
 To install this library, you simply just download it into you python library folder or work folder.
 
 # Use
-To use this library, you will need to know that this library relies on matrices. However it does not use Numpy, it uses its own class called Matrix. The user/programmer does not need to know matrices as that is all handle by the library.
+To use this library, you will need to know that this library relies on matrices. However it does not use Numpy, it uses its own class called Matrix. The user/programmer does not need to know matrices as that is all handled by the library. The library will generate the matrices for you.
 You create a matrix object by:
 ```
 Matrix([[[], ...], [[], [], []...], ...]) -> Matrix
+Matrix.list -> [[[], ...], [[], [], []...], ...]
 ```
 
 For our purposes, we are going to mostly use 4x4 and 1x4 matrices for representing 3d coordinates and manipulationg them.
-The matrix class has its own matrix multiplication algorithm that computes it as it should be. Use Matrix @ Matrix to perform a matrix multiplication
+The matrix class has its own matrix multiplication algorithm that computes it as it should be. Use `Matrix @ Matrix` to perform a matrix multiplication.
 
 There is a Tranformation function which will generate matrices for you based on the type you want. The use of this function is:
 ```
