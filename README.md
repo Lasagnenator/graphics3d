@@ -8,6 +8,12 @@ None. This is a standalone library for python 3.x. It uses the builtin math modu
 To install this library, you simply just download it into you python library folder or work folder.
 
 # Use
+To start off go ahead and import it using
+```
+import 3dto2d
+from 3dto2d import *
+```
+
 To use this library, you will need to know that this library relies on matrices. However it does not use Numpy, it uses its own class called Matrix. The user/programmer does not need to know matrices as that is all handled by the library. The library will generate the matrices for you.
 You create a matrix object by:
 ```
