@@ -35,6 +35,12 @@ Scale(point, S) -> [x,y,z]
 In both functions, point is a list of `[x,y,z]`. pivot_point is also a list of `[x,y,z]`.
 T, S, R are all matrices but do not have to be a Matrix class. They will be converted automatically to be used.
 
+There is a function called InFrutum which detects if a point is in the frustum described by the angles that the faces meet with the x and y axis. It is used as follows.
+```
+InFrustum(point, theta_x, theta_y, degrees=True) -> bool
+```
+Here point is a list `[x,y,z]` and `theta_x,y` is the angle horizontally (x) or vertically (y) that the camera can see. It will return False for when the point is technically inside the frustum but on the face. `degrees` is a variable that when true will make the function interprete theta as a degree while when it is false, it will be interpreted as radians. THe benefit to using degrees is that I have defined them for every 5 degrees so there are no floating-point errors. This should be enough for any use however you can expand this to whatever precision you want later.
+
 # Acknowledgments
 All of my work is free to use and create with however you must credit me and provide a link to this repository when used.
 This whole library is my own work and I came up with the algorithms by my own.
