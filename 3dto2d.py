@@ -129,7 +129,7 @@ Rx, Ry, Rz are rotation matrices to be applied."""
     point[1] -= pivot_point[1]
     point[2] -= pivot_point[2]
     point_matrix = Matrix([[point[0]],[point[1]],[point[2]],[1]])
-    new_matrix = Rx @ Ry @ Rz @ point_matrix
+    new_matrix = ((Rx @ Ry)@ Rz )@ point_matrix
     final_matrix = [[1, 0, 0, pivot_point[0]],
                                  [0, 1, 0, pivot_point[1]],
                                  [0, 0, 1, pivot_point[2]],
@@ -151,6 +151,21 @@ T is a translation matrix"""
                     [1]])
     T = Matrix(T)
     final_matrix = T @ point
+    final_list = final_matrix.list
+    point_x = final_list[0][0]
+    point_y = final_list[1][0]
+    point_z = final_list[2][0]
+    return [point_x, point_y, point_z]
+
+def Scale(point, S):
+    """Point is a list (x,y,z)
+S is a scaling matrix"""
+    point = Matrix([[point[0]],
+                    [point[1]],
+                    [point[2]],
+                    [1]])
+    S = Matrix(S)
+    final_matrix = S @ point
     final_list = final_matrix.list
     point_x = final_list[0][0]
     point_y = final_list[1][0]
@@ -193,7 +208,7 @@ Returns True if point is on the edge of the frustum"""
             return True
     return False
 
-###The matrixmultiplication function I found.
+###The matrix multiplication function I found.
 def matmul(a, b):
     zip_b = list(zip(*b))
     return ([[sum(map(lambda x, y: x * y, row_a, col_b)) for col_b in zip_b] for row_a in a])
