@@ -1,6 +1,9 @@
 # 3dto2d
 A library that manipulates 3d points and projects them to screen coordinates.
 
+# Dependencies
+None. This is a standalone library for python 3.x. It uses the builtin math module just for the trigonometric functions.
+
 # Installation
 To install this library, you simply just download it into you python library folder or work folder.
 
