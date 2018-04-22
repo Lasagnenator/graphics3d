@@ -213,3 +213,5 @@ def matmul(a, b):
     zip_b = list(zip(*b))
     return ([[sum(map(lambda x, y: x * y, row_a, col_b)) for col_b in zip_b] for row_a in a])
 
+__author__ = "Matthew Richards"
+__version__ = "1.0"
