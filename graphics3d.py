@@ -1,4 +1,4 @@
-"""Converts 3d cooridante to 3d coordinates for rendering to a 2d screen
+"""Manipulates 3d points and converts 3d coordinates to 2d screen coordinates.
 The whole library assumes that the camera is fixed at 0,0,0 looking at
 positive z:
 
