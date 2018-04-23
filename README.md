@@ -10,8 +10,8 @@ To install this library, you simply just download it into you python library fol
 # Use
 To start off go ahead and import it using
 ```
-import 3dto2d
-from 3dto2d import *
+import graphics3d
+from graphics3d import *
 ```
 
 To use this library, you will need to know that this library relies on matrices. However it does not use Numpy, it uses its own class called Matrix. The user/programmer does not need to know matrices as that is all handled by the library. The library will generate the matrices for you.
@@ -49,4 +49,4 @@ Here point is a list `[x,y,z]` and `theta_x,y` is the angle horizontally (x) or 
 
 # Acknowledgments
 All of my work is free to use and create with however you must credit me and provide a link to this repository when used.
-This whole library is my own work and I came up with the algorithms on my own.
+This whole library is my own work.
