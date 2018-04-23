@@ -47,6 +47,13 @@ InFrustum(point, theta_x, theta_y, degrees=True) -> bool
 ```
 Here point is a list `[x,y,z]` and `theta_x,y` is the angle horizontally (x) or vertically (y) that the camera can see. It will return False for when the point is technically inside the frustum but on the face. `degrees` is a variable that when true will make the function interprete theta as a degree while when it is false, it will be interpreted as radians. THe benefit to using degrees is that I have defined them for every 5 degrees so there are no floating-point errors. This should be enough for any use however you can expand this to whatever precision you want later.
 
+A function called Multi_Transform is availiable that will perform many transformations in the order described by the order of the arguments. For rotation, only rotation around 0,0,0 is availiable currently. To use it use:
+```
+Multi_Transform(point, args) -> [x,y,z]
+```
+Here point is a list `[x,y,z]` and args is a list of transformations to be done in the specified order.
+
+
 # Acknowledgments
 All of my work is free to use and create with however you must credit me and provide a link to this repository when used.
 This whole library is my own work.
