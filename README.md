@@ -1,4 +1,4 @@
-# 3dto2d
+# graphics3d
 A library that manipulates 3d points and projects them to screen coordinates.
 
 # Dependencies
