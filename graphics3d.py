@@ -172,7 +172,7 @@ S is a scaling matrix"""
     point_z = final_list[2][0]
     return [point_x, point_y, point_z]
 
-def Multi_Transform(point, *args):
+def Multi_Transform(point, args):
     """Applies many transformations at one in the order defined by args"""
     point = Matrix([[point[0]],
                     [point[1]],
