@@ -58,7 +58,7 @@ def tan_deg(x):
         return tan(radians(x))
 
 
-###My on matrix so I don't need numpy as a dependecy
+###My own matrix so I don't need numpy as a dependecy
 class Matrix():
     """Matrix class for matrix multiplication
 Usage Matrix(x) @ Matrix(y)"""
@@ -101,17 +101,17 @@ Rotate_x,y,z -> args = (theta)"""
                        [0, args[1], 0, 0],
                        [0, 0, args[2], 0],
                        [0, 0, 0, 1]])
-    elif type == "Rx":
+    elif type == "RX":
         return Matrix([[1, 0, 0, 0],
                        [0, cos(args[0]), -sin(args[0]), 0],
                        [0, sin(args[0]), cos(args[0])],
                        [0, 0, 0, 1]])
-    elif type == "Ry":
+    elif type == "RY":
         return Matrix([[cos(args[0]), 0, sin(args[0]), 0],
                        [0, 1, 0, 0],
                        [-sin(args[0]), 0, cos(args[0]), 0],
                        [0, 0, 0, 1]])
-    elif type == "Rz":
+    elif type == "RZ":
         return Matrix([[cos(args[0]), -sin(args[0]), 0, 0],
                        [sin(args[0]), cos(args[0]), 0, 0],
                        [0, 0, 1, 0],
