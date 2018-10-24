@@ -53,7 +53,16 @@ Multi_Transform(point, args) -> [x,y,z]
 ```
 Here point is a list `[x,y,z]` and args is a list of transformations to be done in the specified order.
 
+And finally, the last step. Projection onto the screen. There is a function called Project which will project a 3d point onto the 2d screen. This assumes that the camera is facing towards the positive z axis, is fixed at (0,0,0) and that InFrustum has already been checked. Apply all transformations before this function as you cannot change them afterwards. 
+```
+Project(point) -> [x,y]
+```
+The input of Project is a list `[x,y,z]`.
+The point (0,0) on the returned value is the middle of the screen and is equivalent to the point (0,0,1)
 
 # Acknowledgments
+
+The matrix multiplication function was found here: https://stackoverflow.com/a/10508239/6572831
+
 All of my work is free to use and create with however you must credit me and provide a link to this repository when used.
 This whole library is my own work.
