@@ -222,7 +222,12 @@ Returns True if point is on the edge of the frustum"""
     return False
 
 ###The matrix multiplication function I found.
+###https://stackoverflow.com/a/10508239/6572831
 def matmul(a, b):
+    """
+    Matrix multiplication function found on stack overflow:
+    https://stackoverflow.com/a/10508239/6572831
+    """
     zip_b = list(zip(*b))
     return ([[sum(map(lambda x, y: x * y, row_a, col_b)) for col_b in zip_b] for row_a in a])
 
