@@ -14,7 +14,7 @@ import graphics3d
 from graphics3d import *
 ```
 
-To use this library, you will need to know that this library relies on matrices. However it does not use Numpy, it uses its own class called Matrix. The user/programmer does not need to know matrices as that is all handled by the library. The library will generate the matrices for you.
+To use this library, you will need to know that this library relies on matrices. However it does not use Numpy or any other matrix library, it uses its own class called Matrix. The user/programmer does not need to know matrices as that is all handled by the library. The library will generate the matrices for you.
 You create a matrix object by:
 ```
 Matrix([[[], ...], [[], [], []...], ...]) -> Matrix
@@ -41,7 +41,7 @@ Scale(point, S) -> [x,y,z]
 In both functions, point is a list of `[x,y,z]`. pivot_point is also a list of `[x,y,z]`.
 T, S, R are all matrices but do not have to be a Matrix class. They will be converted automatically to be used.
 
-There is a function called InFrutum which detects if a point is in the frustum described by the angles that the faces meet with the x and y axis. It is used as follows.
+There is a function called InFrustum which detects if a point is in the frustum described by the angles that the faces meet with the x and y axis. It is used as follows.
 ```
 InFrustum(point, theta_x, theta_y, degrees=True) -> bool
 ```
