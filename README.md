@@ -60,6 +60,14 @@ Project(point) -> [x,y]
 The input of Project is a list `[x,y,z]`.
 The point (0,0) on the returned value is the middle of the screen and is equivalent to the point (0,0,1)
 
+# Test
+To test that this library is installed correctly, run "Graphics3d test.py".
+This test library requires pygame to run correctly.
+The program running properly will show a cube spinning in roughly the middle of the screen.
+
+# Example usage
+Refer to "Graphics3d test.py" for an example implementation of the library. 
+
 # Acknowledgments
 
 The matrix multiplication function was found here: https://stackoverflow.com/a/10508239/6572831
