@@ -74,7 +74,7 @@ Usage Matrix(x) @ Matrix(y)"""
         zip_b = list(zip(*b))
         return Matrix([[sum(map(lambda x, y: x * y, row_a, col_b)) for col_b in zip_b] for row_a in a])
     def __rmatmul__(self, matrix):
-        matrix - Matrix(matrix)
+        matrix = Matrix(matrix)
         a = matrix.list
         b = self.list
         zip_b = list(zip(*b))
