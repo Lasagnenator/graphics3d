@@ -58,7 +58,7 @@ def tan_deg(x):
         return tan(radians(x))
 
 
-###My own matrix so I don't need numpy as a dependecy
+###My own matrix because I only need matrix multiplication.
 class Matrix():
     """Matrix class for matrix multiplication
 Usage Matrix(x) @ Matrix(y)"""
