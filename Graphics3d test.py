@@ -1,5 +1,5 @@
 #Graphics3d test
-from Libraries.graphics3d import *
+from graphics3d import *
 import pygame
 
 pygame.init()
